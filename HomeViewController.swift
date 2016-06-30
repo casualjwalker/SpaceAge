@@ -19,6 +19,12 @@ class HomeViewController: UIViewController {
     //Mark: Outlets
     @IBOutlet weak var calculateLabel: UILabel!
     @IBOutlet weak var EnterAgeTextField: UITextField!
+    @IBOutlet weak var planetPicker: UIPickerView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        calculateLabel.hidden = true
+    }
     
     //TODO: Show Calculation
     @IBAction func ShowCalculation(sender: UIButton) {
@@ -31,6 +37,7 @@ class HomeViewController: UIViewController {
                 calculateLabel.text = "Please enter an Age!"
             }
         }
+        calculateLabel.hidden = false
     }
     func ageToSeconds(ageInYears: Int) -> Float {
         return Float(ageInYears) * earthYearInSeconds
@@ -41,8 +48,11 @@ class HomeViewController: UIViewController {
         return 1
     }
     
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return planets.milkyWay.count
+    func pickerView(pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        let titleData = planets.milkyWay[row].name
+        let color = UIColor(red: 1, green: 253/255, blue: 225/255, alpha: 1)
+        let myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont(name: "Futura", size: 26.0)!,NSForegroundColorAttributeName:color])
+        return myTitle
     }
   
     //Mark: Delegate

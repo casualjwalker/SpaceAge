@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Home View Controller-->
@@ -17,48 +18,81 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eGK-8d-GAE">
-                                <rect key="frame" x="95" y="100" width="150" height="30"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Ex. 28" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eGK-8d-GAE">
+                                <rect key="frame" x="98" y="62" width="130" height="44"/>
+                                <color key="backgroundColor" red="1" green="0.99215686274509807" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="Ccl-5V-2Nm"/>
+                                    <constraint firstAttribute="height" constant="44" id="GWa-b5-57L"/>
+                                    <constraint firstAttribute="width" constant="130" id="a9H-gC-pBj"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="eAj-ZD-Gdd"/>
+                                </constraints>
+                                <color key="textColor" red="0.1764705882352941" green="0.18431372549019609" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4jm-en-gyN">
-                                <rect key="frame" x="109" y="444" width="100" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4jm-en-gyN">
+                                <rect key="frame" x="95" y="386" width="130" height="44"/>
+                                <color key="backgroundColor" red="1" green="0.99215686274509807" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="Prl-i9-k8G"/>
+                                    <constraint firstAttribute="height" constant="44" id="uBJ-xp-14e"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
                                 <size key="titleShadowOffset" width="100" height="0.0"/>
-                                <state key="normal" title="Calculate"/>
+                                <state key="normal" title="Calculate">
+                                    <color key="titleColor" red="0.23921568627450979" green="0.24313725490196078" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="ShowCalculation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xfx-zC-76F"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please enter your age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2c-BX-kDG">
-                                <rect key="frame" x="84" y="71" width="166" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pick a Planet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vgJ-Uh-Wh2">
-                                <rect key="frame" x="111" y="202" width="98" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Please enter your age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2c-BX-kDG">
+                                <rect key="frame" x="60" y="20" width="206" height="26"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <color key="textColor" red="0.93725490196078431" green="0.72941176470588232" blue="0.23921568627450979" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x7c-OP-2LL">
-                                <rect key="frame" x="-1" y="226" width="320" height="216"/>
+                                <rect key="frame" x="10" y="167" width="320" height="216"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="Uxp-Gs-f3h"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="K4Q-ct-kaB"/>
                                 </connections>
                             </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Calculation Goes Here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" translatesAutoresizingMaskIntoConstraints="NO" id="KxG-5r-FJI">
-                                <rect key="frame" x="59" y="494" width="172" height="24"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <color key="textColor" red="0.80683491492146597" green="0.1658525793041653" blue="0.22253440687900794" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Calculation Goes Here" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" translatesAutoresizingMaskIntoConstraints="NO" id="KxG-5r-FJI">
+                                <rect key="frame" x="20" y="438" width="280" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="Cv7-o1-v4f"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="KcA-dt-qop"/>
+                                    <constraint firstAttribute="height" constant="80" id="Od5-IE-g2c"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="28"/>
+                                <color key="textColor" red="0.93725490196078431" green="0.72941176470588232" blue="0.23921568627450979" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Pick a Planet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vgJ-Uh-Wh2">
+                                <rect key="frame" x="104" y="126" width="124" height="26"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <color key="textColor" red="0.93725490196078431" green="0.72941176470588232" blue="0.23921568627450979" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.23921568627450979" green="0.24313725490196078" blue="0.22352941176470587" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.39700000000000002" green="0.11575878912142087" blue="0.18614765235924144" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="eGK-8d-GAE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="08e-gq-Sy3"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="KxG-5r-FJI" secondAttribute="bottom" constant="50" id="78C-0y-70y"/>
+                            <constraint firstItem="eGK-8d-GAE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="42" id="CAH-0n-IDI"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="KxG-5r-FJI" secondAttribute="leading" id="M3B-tY-qVR"/>
+                            <constraint firstItem="d2c-BX-kDG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Rvq-l2-HnI"/>
+                            <constraint firstItem="KxG-5r-FJI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SYr-h1-0Lw"/>
+                            <constraint firstItem="KxG-5r-FJI" firstAttribute="top" secondItem="4jm-en-gyN" secondAttribute="bottom" constant="8" id="X15-D4-qZC"/>
+                            <constraint firstItem="KxG-5r-FJI" firstAttribute="centerX" secondItem="vgJ-Uh-Wh2" secondAttribute="centerX" id="XbL-pf-k2d"/>
+                            <constraint firstItem="d2c-BX-kDG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="i4i-oN-gkW"/>
+                            <constraint firstItem="vgJ-Uh-Wh2" firstAttribute="centerX" secondItem="d2c-BX-kDG" secondAttribute="centerX" id="oJM-du-RC7"/>
+                            <constraint firstItem="4jm-en-gyN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tGY-v6-u7K"/>
+                        </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
                         </userDefinedRuntimeAttributes>
@@ -66,11 +100,12 @@
                     <connections>
                         <outlet property="EnterAgeTextField" destination="eGK-8d-GAE" id="R6d-DH-P6p"/>
                         <outlet property="calculateLabel" destination="KxG-5r-FJI" id="RVO-CJ-rAj"/>
+                        <outlet property="planetPicker" destination="x7c-OP-2LL" id="dZJ-nc-IVq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="202" y="226"/>
+            <point key="canvasLocation" x="409" y="221"/>
         </scene>
     </scenes>
 </document>
