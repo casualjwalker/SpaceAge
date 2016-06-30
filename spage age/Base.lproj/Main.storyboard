@@ -53,7 +53,7 @@
                                 <color key="textColor" red="0.93725490196078431" green="0.72941176470588232" blue="0.23921568627450979" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x7c-OP-2LL">
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x7c-OP-2LL">
                                 <rect key="frame" x="10" y="167" width="320" height="216"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="Uxp-Gs-f3h"/>
@@ -71,7 +71,7 @@
                                 <color key="textColor" red="0.93725490196078431" green="0.72941176470588232" blue="0.23921568627450979" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Pick a Planet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vgJ-Uh-Wh2">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Pick a Planet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vgJ-Uh-Wh2">
                                 <rect key="frame" x="104" y="126" width="124" height="26"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                 <color key="textColor" red="0.93725490196078431" green="0.72941176470588232" blue="0.23921568627450979" alpha="1" colorSpace="calibratedRGB"/>
@@ -82,14 +82,17 @@
                         <color key="tintColor" red="0.39700000000000002" green="0.11575878912142087" blue="0.18614765235924144" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="eGK-8d-GAE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="08e-gq-Sy3"/>
+                            <constraint firstItem="4jm-en-gyN" firstAttribute="top" secondItem="x7c-OP-2LL" secondAttribute="bottom" constant="3" id="0fI-Zk-OJd"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="KxG-5r-FJI" secondAttribute="bottom" constant="50" id="78C-0y-70y"/>
                             <constraint firstItem="eGK-8d-GAE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="42" id="CAH-0n-IDI"/>
+                            <constraint firstItem="x7c-OP-2LL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-6" id="Lyq-aI-frM"/>
                             <constraint firstAttribute="leadingMargin" secondItem="KxG-5r-FJI" secondAttribute="leading" id="M3B-tY-qVR"/>
                             <constraint firstItem="d2c-BX-kDG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Rvq-l2-HnI"/>
                             <constraint firstItem="KxG-5r-FJI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SYr-h1-0Lw"/>
                             <constraint firstItem="KxG-5r-FJI" firstAttribute="top" secondItem="4jm-en-gyN" secondAttribute="bottom" constant="8" id="X15-D4-qZC"/>
                             <constraint firstItem="KxG-5r-FJI" firstAttribute="centerX" secondItem="vgJ-Uh-Wh2" secondAttribute="centerX" id="XbL-pf-k2d"/>
                             <constraint firstItem="d2c-BX-kDG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="i4i-oN-gkW"/>
+                            <constraint firstItem="x7c-OP-2LL" firstAttribute="top" secondItem="vgJ-Uh-Wh2" secondAttribute="bottom" constant="15" id="jpg-sJ-hZd"/>
                             <constraint firstItem="vgJ-Uh-Wh2" firstAttribute="centerX" secondItem="d2c-BX-kDG" secondAttribute="centerX" id="oJM-du-RC7"/>
                             <constraint firstItem="4jm-en-gyN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tGY-v6-u7K"/>
                         </constraints>
